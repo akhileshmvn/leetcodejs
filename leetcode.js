@@ -7,9 +7,11 @@ const target = 9
 var twoSum = function(nums, target) {
     for(let i = 0; i<nums.length; i++){
         complement = target - nums[i]
-        if(nums.contains(complement)){
+        if(nums.includes(complement) && nums.indexOf(complement) !== i){
             return [i,nums.indexOf(complement)]
         }
     }
 };
 console.log(twoSum(nums, target))
+
+//===============================================================================
